@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets\favicon-32x33.png" />
+    <title>Admin Login</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="css\Adminlogin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="js\Adminlogin.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header-nav">
+        <ul class="nav-ul">
+          <li class="nav-li logo-li">
+            <a href="/index.html">
+              <div class="first">
+                <img src="assets\default (1).png" widht="60" height="60" />
+              </div>
+
+              <!-- <span class="logo-text">Company</span> -->
+            </a>
+            <div class="menu-icon" onclick="showMenu()">
+              <svg viewBox="0 -53 386 386" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+                />
+                <path
+                  d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+                />
+                <path
+                  d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+                />
+              </svg>
+            </div>
+          </li>
+          <li class="nav-li platform-li">
+            <a href="index.html"
+              ><i
+                class="fas fa-home"
+                style="
+                  background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+                  background: -webkit-linear-gradient(
+                    left,
+                    #234e74,
+                    #52c0a2 100%
+                  );
+                  background: linear-gradient(left, #234e74, #52c0a2 100%);
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              ></i>
+              Home</a
+            >
+          </li>
+          <li class="nav-li">
+            <a href="Aboutus.html"
+              ><i
+                class="fas fa-info-circle"
+                style="
+                  background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+                  background: -webkit-linear-gradient(
+                    left,
+                    #234e74,
+                    #52c0a2 100%
+                  );
+                  background: linear-gradient(left, #234e74, #52c0a2 100%);
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              ></i>
+              About us</a
+            >
+          </li>
+          <li class="nav-li">
+            <a href="Adminsignup.html"
+              ><i
+                class="fas fa-users"
+                style="
+                  background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+                  background: -webkit-linear-gradient(
+                    left,
+                    #234e74,
+                    #52c0a2 100%
+                  );
+                  background: linear-gradient(left, #234e74, #52c0a2 100%);
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              ></i>
+              Sign Up</a
+            >
+          </li>
+          <li class="nav-li">
+            <a href="Hospitals.html"
+              ><i
+                class="fas fa-plus-square"
+                style="
+                  background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+                  background: -webkit-linear-gradient(
+                    left,
+                    #234e74,
+                    #52c0a2 100%
+                  );
+                  background: linear-gradient(left, #234e74, #52c0a2 100%);
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              ></i>
+              Hospitals</a
+            >
+          </li>
+          <li class="nav-li">
+            <a href="Admin login.html"
+              ><i
+                class="fas fa-key"
+                style="
+                  background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+                  background: -webkit-linear-gradient(
+                    left,
+                    #234e74,
+                    #52c0a2 100%
+                  );
+                  background: linear-gradient(left, #234e74, #52c0a2 100%);
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              ></i>
+              Admin Login</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <script>
+      let els = document.querySelectorAll(".nav-li");
+      function showMenu() {
+        els.forEach((el, i) => {
+          if (i > 0) {
+            if (el.style.display === "" || el.style.display === "none") {
+              el.style.display = "flex";
+            } else {
+              el.style.display = "none";
+            }
+          }
+        });
+      }
+      window.addEventListener("resize", () => {
+        if (window.innerWidth <= 800) {
+          els.forEach((el, i) => i > 0 && (el.style.display = "none"));
+        } else {
+          els.forEach((el) => (el.style.display = "flex"));
+        }
+      });
+    </script>
+  <body class="login">
+    <div class="container">
+      <div class="login-container-wrapper clearfix">
+        <div class="logo">
+          <i class="fa fa-lock"></i>
+        </div>
+        <div class="welcome" style="margin-top: 20px">
+          <strong>Welcome,</strong> please login
+        </div>
+
+        <div class="form-horizontal login-form">
+          <div class="form-group relative">
+            <input
+              id="login_username"
+              class="form-control input-lg"
+              type="email"
+              placeholder="Username"
+              required
+            />
+            <i class="fa fa-user"></i>
+          </div>
+          <div class="form-group relative password">
+            <input
+              id="login_password"
+              class="form-control input-lg"
+              type="password"
+              placeholder="Password"
+              required
+            />
+            <i class="fa fa-lock"></i>
+          </div>
+          <div class="form-group">
+            <button onclick='login()' type="submit" class="btn btn-success btn-lg btn-block">
+              Login
+            </button>
+          </div>
+          <div class="checkbox pull-right">
+
+              <a class="forget" href="" title="forget" id="forgetpw">Forgot your password?</a>
+
+          </div>
+        </div>
+        <!-- <button onclick="logout()">logout</button> -->
+
+      </div>
+      <h4 class="text-center"></h4>
+    </div>
+     <div class="footer-longevo">
+      <br /><br />
+      <div
+        style="
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        "
+      >
+        <div style="height: 5px; background-color: #234e74; width: 40%"></div>
+        <div style="text-align: center">
+          <img
+            class="footer-logo"
+            src="assets\profile-removebg-preview.png"
+            alt="LOGO"
+          />
+        </div>
+        <div style="height: 5px; background: #52c0a2; width: 40%"></div>
+      </div>
+      <div style="text-align: center">
+        <div
+          style="width: 5px; height: 50px; background: #0e8d6b; margin: auto"
+        ></div>
+      </div>
+      <div class="footer-nav-links-container">
+        <div class="footer-nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Aboutus.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-links">
+          <ul>
+            <li><a href="Adminsignup.html">Sign up</a></li>
+            <li><a href="Hospitals.html">Hospitals</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-social-media-links-container">
+        <a
+          href="https://www.facebook.com"
+          class="fa fa-facebook"
+          style="
+            display: flex;
+            font-size: 35px;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></a>
+        <a
+          href="https://www.instagram.com"
+          class="fa fa-instagram"
+          style="
+            display: flex;
+
+            font-size: 35px;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></a>
+        <a
+          href="https://www.twitter.com"
+          class="fa fa-twitter"
+          style="
+            display: flex;
+            font-size: 35px;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></a>
+        <a
+          href="https://www.linkedin.com"
+          class="fa fa-linkedin"
+          style="
+            display: flex;
+            font-size: 35px;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></a
+        ><a
+          href="https://www.pinterest.com"
+          class="fa fa-pinterest"
+          style="
+            display: flex;
+            font-size: 35px;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></a>
+      </div>
+      <div style="text-align: center; margin-top: 30px; color: white">
+        ©
+        <!-- -->2021<!-- -->
+        All rights reserved to Longevo<br />
+        <small><a>PRIYAL TIWARY</a></small>
+      </div>
+      <br />
+    </div>
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyB2fPEnYmc9VrKZ-foh976V4ZXiMg5ESEY",
+    authDomain: "longevo-61a1d.firebaseapp.com",
+    projectId: "longevo-61a1d",
+    storageBucket: "longevo-61a1d.appspot.com",
+    messagingSenderId: "985900621619",
+    appId: "1:985900621619:web:9bdf64f5a86f675bbd6846",
+    measurementId: "G-YH0HN4F13L"
+  };
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+  </body>
+</html>

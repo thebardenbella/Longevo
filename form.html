@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets\favicon-32x33.png" />
+    <title>Book Appointment</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="css\form.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header-nav">
+        <ul class="nav-ul">
+          <li class="nav-li logo-li">
+            <a href="/index.html">
+              <div class="first">
+                <img src="assets\default (1).png" widht="60" height="60" />
+              </div>
+
+              <!-- <span class="logo-text">Company</span> -->
+            </a>
+            <div class="menu-icon" onclick="showMenu()">
+              <svg viewBox="0 -53 386 386" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+                />
+                <path
+                  d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+                />
+                <path
+                  d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+                />
+              </svg>
+            </div>
+          </li>
+          <li class="nav-li platform-li">
+            <a href="index.html"
+              ><i
+                class="fas fa-home"
+                style="
+                  background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+                  background: -webkit-linear-gradient(
+                    left,
+                    #234e74,
+                    #52c0a2 100%
+                  );
+                  background: linear-gradient(left, #234e74, #52c0a2 100%);
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              ></i>
+              Home</a
+            >
+          </li>
+          <li class="nav-li">
+            <a href="Aboutus.html"
+              ><i
+                class="fas fa-info-circle"
+                style="
+                  background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+                  background: -webkit-linear-gradient(
+                    left,
+                    #234e74,
+                    #52c0a2 100%
+                  );
+                  background: linear-gradient(left, #234e74, #52c0a2 100%);
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              ></i>
+              About us</a
+            >
+          </li>
+          <li class="nav-li">
+            <a href="Adminsignup.html"
+              ><i
+                class="fas fa-users"
+                style="
+                  background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+                  background: -webkit-linear-gradient(
+                    left,
+                    #234e74,
+                    #52c0a2 100%
+                  );
+                  background: linear-gradient(left, #234e74, #52c0a2 100%);
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              ></i>
+              Sign Up</a
+            >
+          </li>
+          <li class="nav-li">
+            <a href="Hospitals.html"
+              ><i
+                class="fas fa-plus-square"
+                style="
+                  background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+                  background: -webkit-linear-gradient(
+                    left,
+                    #234e74,
+                    #52c0a2 100%
+                  );
+                  background: linear-gradient(left, #234e74, #52c0a2 100%);
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              ></i>
+              Hospitals</a
+            >
+          </li>
+          <li class="nav-li">
+            <a href="Admin login.html"
+              ><i
+                class="fas fa-key"
+                style="
+                  background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+                  background: -webkit-linear-gradient(
+                    left,
+                    #234e74,
+                    #52c0a2 100%
+                  );
+                  background: linear-gradient(left, #234e74, #52c0a2 100%);
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              ></i>
+              Admin Login</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+  <body class="login">
+    <div class="container">
+      <div class="login-container-wrapper clearfix">
+        <div class="logo">
+          <i class="fa fa-file-text"></i>
+        </div>
+        <div class="welcome" style="margin-top: 20px;font-size:22px">
+          <strong>BOOK YOUR APPOINTMENT</strong>
+        </div>
+
+        <div class="form-horizontal login-form">
+          <div class="form-group relative">
+            <input class="form-control input-lg" type="text" required placeholder="First Name..." required/>
+          </div>
+          <div class="form-group relative password">
+            <input class="form-control input-lg" type="text" placeholder="Last Name..." required/>
+          </div>
+          <div class="form-group relative password">
+              <div class="custom-select">
+                <select>
+                  <option>Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Others">Others</option>
+                </select>
+              </div>
+          </div>
+          <div class="form-group relative">
+            <input class="form-control input-lg" type="email"placeholder="Email Address..." required/>
+          </div>
+          <div class="form-group relative">
+            <input class="form-control input-lg" type="text" placeholder="Phone Number..." required/>
+          </div>
+          <div class="form-group relative">
+            <textarea class="form-control input-lg" id="address" name="name"
+             rows="4" cols="20" placeholder="Address..." style="color:white"></textarea>
+            <!-- <input class="form-control input-lg" type="text" placeholder="Address..." required/ id="add"> -->
+          </div>
+          <div class="form-group relative">
+            <input class="form-control input-lg" type="text" placeholder="Pin Code..." required/>
+          </div>
+          <div class="form-group relative password">
+            <div class="custom-select">
+              <select onmousedown="if(this.options.length>8){this.size=8;}"
+                onchange='this.size=0;' onblur="this.size=0;">
+                <optgroup style="max-height: 10px;">
+                  <option selected>State</option>
+                  <!-- <option>Andhra Pradesh</option> -->
+                  <!-- <option>Arunachal Pradesh</option> -->
+                  <!-- <option>Bihar</option> -->
+                  <!-- <option>Chhattisgarh</option> -->
+                  <option>Delhi</option>
+                  <!-- <option>Goa</option> -->
+                  <option>Gujarat</option>
+                  <option>Haryana</option>
+                  <!-- <option>Himachal Pradesh</option> -->
+                  <!-- <option>Jammu and Kashmir</option> -->
+                  <!-- <option>Jharkhand</option> -->
+                  <option>Karnataka</option>
+                  <!-- <option>Kerala</option> -->
+                  <option>Madhya Pradesh</option>
+                  <option>Maharashtra</option>
+                  <!-- <option>Orissa</option> -->
+                  <option>Punjab</option>
+                  <option>Rajasthan</option>
+                  <option>Tamil Nadu</option>
+                  <!-- <option>Telangana</option> -->
+                  <!-- <option>Uttarakhand</option> -->
+                  <option>Uttar Pradesh</option>
+                </optgroup>
+              </select>
+            </div>
+
+          </div>
+          <div class="form-group relative password">
+            <div class="custom-select">
+              <select>
+                <option selected disabled>City</option>
+                <!-- <option>Ahmedabad</option> -->
+                <option>Bengaluru</option>
+                <option>Bhopal</option>
+                <!-- <option>Bhubaneshwar</option> -->
+                <option>Chennai</option>
+                <option>Chandigarh</option>
+                <!-- <option>Dehradun</option> -->
+                <option>Delhi</option>
+                <!-- <option>Faridabad</option> -->
+                <!-- <option>Gandhi Nagar</option> -->
+                <option>Gurugram</option>
+                <option>Hyderabad</option>
+                <option>Jaipur</option>
+                <!-- <option>Kanpur</option> -->
+                <option>Kolkata</option>
+                <option>Lucknow</option>
+                <option>Mumbai</option>
+                <!-- <option>Patna</option> -->
+                <!-- <option>Pune</option> -->
+                <!-- <option>Raipur</option> -->
+                <!-- <option>Ranchi</option> -->
+                <!-- <option>Thiruvananthapuram</option> -->
+              </select>
+            </div>
+          </div>
+          <div class="form-group relative password">
+            <div class="custom-select">
+              <select>
+                <option> Speciality</option>
+                <option> Cardio Thoracic Surgeon </option>
+                <option> Cardiologist </option>
+                <option> Critical Care Specialist </option>
+                <option> Dentist </option>
+                <option> Dermatologist</option>
+                <option> Endocrinologist </option>
+                <option> ENT Specialist </option>
+                <option> Family Medicine Physician </option>
+                <option> Gastroenterologist </option>
+                <option> General Surgeon </option>
+                <option> Gynecologist </option>
+                <option> Neurologist </option>
+                <option> Neurosurgeon </option>
+                <option> Opthalmologist </option>
+                <option> Orthopaedic surgeon </option>
+                <option> Pain Management Specialist </option>
+                <option> Padiatric Neurologist </option>
+                <option> Spine Surgeon </option>
+                <option> Urologist </option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group relative password">
+            <div class="custom-select">
+              <select>
+                <option> Hospital</option>
+                <option> AIIMS </option>
+                <option> Apollo Hospital </option>
+                <option> Fortis Escorts Heart Institute </option>
+                <option> Indraprastha Apollo Hospital </option>
+                <option> Fortis Hospital</option>
+                <option> Nanavati Hospital </option>
+                <option> Manipal Hospital </option>
+                <option> Max Superspecialty Hospital </option>
+                <option> Columbia Asia Referral Hospital </option>
+                <option> Artemis Hospital </option>
+                <option> Wockhardt Hospital </option>
+                <option> Ruby Hall Clinic </option>
+                <option> MaxCure Hospital </option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group relative password">
+            <input type="date" class="selectopt" style="color:white">
+          </div>
+
+          <div class="form-group relative password">
+            <div class="custom-select">
+              <select>
+                <option> Timings</option>
+                <option> 10:00-11:00 </option>
+                <option> 11:00-12:00 </option>
+                <option> 12:00-13:00 </option>
+                <option> 13:00-14:00 </option>
+                <option> 14:00-15:00 </option>
+                <option> 15:00-16:00 </option>
+                <option> 16:00-17:00 </option>
+                <option> 17:00-18:00 </option>
+                <option> 18:00-19:00 </option>
+                <option> 19:00-20:00 </option>
+                <option> 20:00-21:00 </option>
+              </select>
+            </div>
+          </div>
+          <br>
+          <div class="form-group relative password">
+            <label class="tnc" style="font-family:Arial;"> I have carefully read the terms and conditions.
+              <input class="chec" type="checkbox" >
+              <span class="checkmark"></span>
+            </label>
+            <!-- <input type="checkbox" id="tnc">
+            <label for="tnc" style="color:white"></label><br> -->
+          </div>
+            <br>
+          <div class="form-group">
+            <button type="submit" class="btn btn-success btn-lg btn-block">
+              BOOK NOW
+            </button>
+            <br>
+            <p style="color:white; font-size:14px;font-family:Arial;">(**By clicking on this button, you will be redirected towards the payment section.)</p>
+          </div>
+
+        </div>
+        <!-- <button onclick="logout()">logout</button> -->
+
+      </div>
+      <h4 class="text-center"></h4>
+    </div>
+     <div class="footer-longevo">
+      <br /><br />
+      <div
+        style="
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        "
+      >
+        <div style="height: 5px; background-color: #234e74; width: 40%"></div>
+        <div style="text-align: center">
+          <img
+            class="footer-logo"
+            src="assets\profile-removebg-preview.png"
+            alt="LOGO"
+          />
+        </div>
+        <div style="height: 5px; background: #52c0a2; width: 40%"></div>
+      </div>
+      <div style="text-align: center">
+        <div
+          style="width: 5px; height: 50px; background: #0e8d6b; margin: auto"
+        ></div>
+      </div>
+      <div class="footer-nav-links-container">
+        <div class="footer-nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Aboutus.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-links">
+          <ul>
+            <li><a href="Adminsignup.html">Sign up</a></li>
+            <li><a href="Hospitals.html">Hospitals</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-social-media-links-container">
+        <a
+          href="https://www.facebook.com"
+          class="fa fa-facebook"
+          style="
+            display: flex;
+            font-size: 35px;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></a>
+        <a
+          href="https://www.instagram.com"
+          class="fa fa-instagram"
+          style="
+            display: flex;
+
+            font-size: 35px;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></a>
+        <a
+          href="https://www.twitter.com"
+          class="fa fa-twitter"
+          style="
+            display: flex;
+            font-size: 35px;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></a>
+        <a
+          href="https://www.linkedin.com"
+          class="fa fa-linkedin"
+          style="
+            display: flex;
+            font-size: 35px;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></a
+        ><a
+          href="https://www.pinterest.com"
+          class="fa fa-pinterest"
+          style="
+            display: flex;
+            font-size: 35px;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></a>
+      </div>
+      <div style="text-align: center; margin-top: 30px; color: white">
+        ©
+        <!-- -->2021<!-- -->
+        All rights reserved to Longevo<br />
+        <small><a>PRIYAL TIWARI</a></small>
+      </div>
+      <br />
+    </div>
+
+    <script>
+      let els = document.querySelectorAll(".nav-li");
+      function showMenu() {
+        els.forEach((el, i) => {
+          if (i > 0) {
+            if (el.style.display === "" || el.style.display === "none") {
+              el.style.display = "flex";
+            } else {
+              el.style.display = "none";
+            }
+          }
+        });
+      }
+      window.addEventListener("resize", () => {
+        if (window.innerWidth <= 800) {
+          els.forEach((el, i) => i > 0 && (el.style.display = "none"));
+        } else {
+          els.forEach((el) => (el.style.display = "flex"));
+        }
+      });
+
+
+            var x, i, j, l, ll, selElmnt, a, b, c;
+      /* Look for any elements with the class "custom-select": */
+      x = document.getElementsByClassName("custom-select");
+      l = x.length;
+      for (i = 0; i < l; i++) {
+        selElmnt = x[i].getElementsByTagName("select")[0];
+        ll = selElmnt.length;
+        /* For each element, create a new DIV that will act as the selected item: */
+        a = document.createElement("DIV");
+        a.setAttribute("class", "select-selected");
+        a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+        x[i].appendChild(a);
+        /* For each element, create a new DIV that will contain the option list: */
+        b = document.createElement("DIV");
+        b.setAttribute("class", "select-items select-hide");
+        for (j = 1; j < ll; j++) {
+          /* For each option in the original select element,
+          create a new DIV that will act as an option item: */
+          c = document.createElement("DIV");
+          c.innerHTML = selElmnt.options[j].innerHTML;
+          c.addEventListener("click", function(e) {
+              /* When an item is clicked, update the original select box,
+              and the selected item: */
+              var y, i, k, s, h, sl, yl;
+              s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+              sl = s.length;
+              h = this.parentNode.previousSibling;
+              for (i = 0; i < sl; i++) {
+                if (s.options[i].innerHTML == this.innerHTML) {
+                  s.selectedIndex = i;
+                  h.innerHTML = this.innerHTML;
+                  y = this.parentNode.getElementsByClassName("same-as-selected");
+                  yl = y.length;
+                  for (k = 0; k < yl; k++) {
+                    y[k].removeAttribute("class");
+                  }
+                  this.setAttribute("class", "same-as-selected");
+                  break;
+                }
+              }
+              h.click();
+          });
+          b.appendChild(c);
+        }
+        x[i].appendChild(b);
+        a.addEventListener("click", function(e) {
+          /* When the select box is clicked, close any other select boxes,
+          and open/close the current select box: */
+          e.stopPropagation();
+          closeAllSelect(this);
+          this.nextSibling.classList.toggle("select-hide");
+          this.classList.toggle("select-arrow-active");
+        });
+      }
+
+      function closeAllSelect(elmnt) {
+        /* A function that will close all select boxes in the document,
+        except the current select box: */
+        var x, y, i, xl, yl, arrNo = [];
+        x = document.getElementsByClassName("select-items");
+        y = document.getElementsByClassName("select-selected");
+        xl = x.length;
+        yl = y.length;
+        for (i = 0; i < yl; i++) {
+          if (elmnt == y[i]) {
+            arrNo.push(i)
+          } else {
+            y[i].classList.remove("select-arrow-active");
+          }
+        }
+        for (i = 0; i < xl; i++) {
+          if (arrNo.indexOf(i)) {
+            x[i].classList.add("select-hide");
+          }
+        }
+      }
+
+      /* If the user clicks anywhere outside the select box,
+      then close all select boxes: */
+      document.addEventListener("click", closeAllSelect);
+      </script>
+
+
+  </body>
+</html>

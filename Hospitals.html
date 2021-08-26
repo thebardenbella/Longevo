@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets\favicon-32x33.png" />
+    <title>Hospitals</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="css\hospitals.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="js\hospitals.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header-nav">
+        <ul class="nav-ul">
+          <li class="nav-li logo-li">
+            <a href="/index.html">
+              <div class="first">
+                <img src="assets\default (1).png" widht="60" height="60" />
+              </div>
+
+              <!-- <span class="logo-text">Company</span> -->
+            </a>
+            <div class="menu-icon" onclick="showMenu()">
+              <svg viewBox="0 -53 386 386" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+                />
+                <path
+                  d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+                />
+                <path
+                  d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+                />
+              </svg>
+            </div>
+          </li>
+          <li class="nav-li platform-li">
+            <a href="index.html"
+              ><i
+                class="fas fa-home"
+                style="
+                  background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+                  background: -webkit-linear-gradient(
+                    left,
+                    #234e74,
+                    #52c0a2 100%
+                  );
+                  background: linear-gradient(left, #234e74, #52c0a2 100%);
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              ></i>
+              Home</a
+            >
+          </li>
+          <li class="nav-li">
+            <a href="Aboutus.html"
+              ><i
+                class="fas fa-info-circle"
+                style="
+                  background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+                  background: -webkit-linear-gradient(
+                    left,
+                    #234e74,
+                    #52c0a2 100%
+                  );
+                  background: linear-gradient(left, #234e74, #52c0a2 100%);
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              ></i>
+              About us</a
+            >
+          </li>
+          <li class="nav-li">
+            <a href="Adminsignup.html"
+              ><i
+                class="fas fa-users"
+                style="
+                  background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+                  background: -webkit-linear-gradient(
+                    left,
+                    #234e74,
+                    #52c0a2 100%
+                  );
+                  background: linear-gradient(left, #234e74, #52c0a2 100%);
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              ></i>
+              Sign Up</a
+            >
+          </li>
+          <li class="nav-li">
+            <a href="Hospitals.html"
+              ><i
+                class="fas fa-plus-square"
+                style="
+                  background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+                  background: -webkit-linear-gradient(
+                    left,
+                    #234e74,
+                    #52c0a2 100%
+                  );
+                  background: linear-gradient(left, #234e74, #52c0a2 100%);
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              ></i>
+              Hospitals</a
+            >
+          </li>
+          <li class="nav-li">
+            <a href="Admin login.html"
+              ><i
+                class="fas fa-key"
+                style="
+                  background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+                  background: -webkit-linear-gradient(
+                    left,
+                    #234e74,
+                    #52c0a2 100%
+                  );
+                  background: linear-gradient(left, #234e74, #52c0a2 100%);
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              ></i>
+              Admin Login</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <script>
+      let els = document.querySelectorAll(".nav-li");
+      function showMenu() {
+        els.forEach((el, i) => {
+          if (i > 0) {
+            if (el.style.display === "" || el.style.display === "none") {
+              el.style.display = "flex";
+            } else {
+              el.style.display = "none";
+            }
+          }
+        });
+      }
+      window.addEventListener("resize", () => {
+        if (window.innerWidth <= 800) {
+          els.forEach((el, i) => i > 0 && (el.style.display = "none"));
+        } else {
+          els.forEach((el) => (el.style.display = "flex"));
+        }
+      });
+    </script>
+    <!-- <div class="search-container">
+      <div id="wrap">
+        <i
+          class="fa fa-search"
+          style="
+            font-size: 50px;
+            font-weight: lighter;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></i>
+        <input
+          id="search"
+          name="search"
+          type="text"
+          placeholder="What're we looking for ?"
+          onkeyup="search_list()"
+          ;
+          onclick="drop_down()"
+          ;
+        /><input id="search_submit" value="Rechercher" type="submit" />
+      </div>
+    </div> -->
+    <br />
+    <br />
+
+    <br />
+    <div class="search-container">
+      <div class="dropdown">
+        <i
+          class="fa fa-search"
+          onclick="search()"
+          style="
+            cursor: pointer;
+            position: relative;
+            font-size: 6vh;
+            bottom: 50px;
+            padding: 5px;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></i>
+        <div id="myDropdown" class="dropdown-content">
+          <input
+            type="text"
+            placeholder="Search.."
+            id="myInput"
+            onkeyup="filterFunction()"
+          />
+          <a href="https://aiimsappointment.online/">Aiims</a>
+          <a href="https://www.apollohospitals.com/">Apollo Hospital</a>
+          <a href="https://www.artemishospitals.com/">Artemis Hospital</a>
+          <a href="https://bombayhospital.com/"
+            >Bombay Hospital & Medical Research</a
+          >
+          <a
+            href="https://www.columbiaindiahospitals.com/hospitals/yeshwanthpur/overview"
+            >Colubia Indian Hospital</a
+          >
+          <a href="https://www.fortishealthcare.com/">Fortis Hospital</a>
+          <a href="https://delhi.apollohospitals.com/">Indraprastha Hospital</a>
+          <a href="http://www.manipalhospitals.com/">Manipal Hospital</a>
+          <a
+            href="http://www.maxhealthcare.in/hospital-network/max-super-speciality-hospital-saket"
+            >Maxx Hospital</a
+          >
+          <a href="https://www.medicoverhospitals.in/">Max Cure Hospital</a>
+          <a href="https://www.medanta.org/gurugram/">Medanta Hospital</a>
+          <a href="https://rubyhall.com/">RubyHall Hospital</a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="heading-container"
+      style="
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        margin-top: 2vh;
+        align-items: center;
+      "
+    >
+      <div style="height: 8px; background-color: #234e74; width: 40%"></div>
+      <div style="text-align: center">
+        <h1
+          style="
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 12vh;
+          "
+        >
+          HOSPITALS
+        </h1>
+      </div>
+      <div style="height: 8px; background: #52c0a2; width: 40%"></div>
+    </div>
+    <div class="card-container">
+      <div class="card-info">
+        <div class="card">
+          <img
+            src="assets\AIIMS\circle-cropped (6).png"
+            alt=""
+            width="100%"
+            style="vertical-align: bottom"
+          />
+          <div class="overlay">
+            <p>
+              <a target="_blank" href="https://aiimsappointment.online/">
+                VISIT
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="content">
+          <a style="font-weight: bold; font-size: 20px; font-family: sans-serif"
+            >All India Institute Of Medical Science</a
+          >
+
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="card">
+          <img
+            src="assets\Apollo\circle-cropped (7).png"
+            alt=""
+            width="100%"
+            style="vertical-align: bottom"
+          />
+          <div class="overlay">
+            <p>
+              <a target="_blank" href="https://www.apollohospitals.com/">
+                VISIT
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="content">
+          <a style="font-weight: bold; font-size: 20px; font-family: sans-serif"
+            >Apollo Hospital</a
+          >
+
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="card">
+          <img
+            src="assets\artemis\circle-cropped (11).png"
+            alt=""
+            width="100%"
+            style="vertical-align: bottom"
+          />
+          <div class="overlay">
+            <p>
+              <a target="_blank" href="https://www.artemishospitals.com/">
+                VISIT
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="content">
+          <a style="font-weight: bold; font-size: 20px; font-family: sans-serif"
+            >Artemis Hospital</a
+          >
+
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="card">
+          <img
+            src="assets\Bombay Hospital & Medical Research Centre\circle-cropped (12).png"
+            alt=""
+            width="100%"
+            style="vertical-align: bottom"
+          />
+          <div class="overlay">
+            <p>
+              <a target="_blank" href="https://bombayhospital.com/"> VISIT </a>
+            </p>
+          </div>
+        </div>
+        <div class="content">
+          <a style="font-weight: bold; font-size: 20px; font-family: sans-serif"
+            >Bombay Hospital & Medical Research</a
+          >
+
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="card">
+          <img
+            src="assets\columbia\circle-cropped (21).png"
+            alt=""
+            width="100%"
+            style="vertical-align: bottom"
+          />
+          <div class="overlay">
+            <p>
+              <a
+                target="_blank"
+                href="https://www.columbiaindiahospitals.com/hospitals/yeshwanthpur/overview"
+              >
+                VISIT
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="content">
+          <a style="font-weight: bold; font-size: 20px; font-family: sans-serif"
+            >Columbia India Hospital</a
+          >
+
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="card">
+          <img
+            src="assets\Fortis\circle-cropped (14).png"
+            alt=""
+            width="100%"
+            style="vertical-align: bottom"
+          />
+          <div class="overlay">
+            <p>
+              <a target="_blank" href="https://www.fortishealthcare.com/">
+                VISIT
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="content">
+          <a style="font-weight: bold; font-size: 20px; font-family: sans-serif"
+            >Fortis Hospital</a
+          >
+
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="card">
+          <img
+            src="assets\indraprastha\circle-cropped (15).png"
+            alt=""
+            width="100%"
+            style="vertical-align: bottom"
+          />
+          <div class="overlay">
+            <p>
+              <a target="_blank" href="https://delhi.apollohospitals.com/">
+                VISIT
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="content">
+          <a style="font-weight: bold; font-size: 20px; font-family: sans-serif"
+            >Indraprastha Hospital</a
+          >
+
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="card">
+          <img
+            src="assets\Manipal\circle-cropped (16).png"
+            alt=""
+            width="100%"
+            style="vertical-align: bottom"
+          />
+          <div class="overlay">
+            <p>
+              <a target="_blank" href="http://www.manipalhospitals.com/">
+                VISIT
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="content">
+          <a style="font-weight: bold; font-size: 20px; font-family: sans-serif"
+            >Manipal Hospital</a
+          >
+
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="card">
+          <img
+            src="assets\max\circle-cropped (17).png"
+            alt=""
+            width="100%"
+            style="vertical-align: bottom"
+          />
+          <div class="overlay">
+            <p>
+              <a
+                target="_blank"
+                href="http://www.maxhealthcare.in/hospital-network/max-super-speciality-hospital-saket"
+              >
+                VISIT
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="content">
+          <a style="font-weight: bold; font-size: 20px; font-family: sans-serif"
+            >Maxx Hospital</a
+          >
+
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="card">
+          <img
+            src="assets\maxcure\circle-cropped (18).png"
+            alt=""
+            width="100%"
+            style="vertical-align: bottom"
+          />
+          <div class="overlay">
+            <p>
+              <a target="_blank" href="https://www.medicoverhospitals.in/">
+                VISIT
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="content">
+          <a style="font-weight: bold; font-size: 20px; font-family: sans-serif"
+            >Max Cure Hospital</a
+          >
+
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="card">
+          <img
+            src="assets\Medanta the medicity\circle-cropped (19).png"
+            alt=""
+            width="100%"
+            style="vertical-align: bottom"
+          />
+          <div class="overlay">
+            <p>
+              <a target="_blank" href="https://www.medanta.org/gurugram/">
+                VISIT
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="content">
+          <a style="font-weight: bold; font-size: 20px; font-family: sans-serif"
+            >Medanta Hospital</a
+          >
+
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="card">
+          <img
+            src="assets\ruby\circle-cropped (20).png"
+            alt=""
+            width="100%"
+            style="vertical-align: bottom"
+          />
+          <div class="overlay">
+            <p>
+              <a target="_blank" href="https://rubyhall.com/"> VISIT </a>
+            </p>
+          </div>
+        </div>
+        <div class="content">
+          <a style="font-weight: bold; font-size: 20px; font-family: sans-serif"
+            >RubyHall Hospital</a
+          >
+
+        </div>
+      </div>
+    </div>
+    <div class="footer-longevo">
+      <br /><br />
+      <div
+        style="
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        "
+      >
+        <div style="height: 5px; background-color: #234e74; width: 40%"></div>
+        <div style="text-align: center">
+          <img
+            class="footer-logo"
+            src="assets\profile-removebg-preview.png"
+            alt="LOGO"
+          />
+        </div>
+        <div style="height: 5px; background: #52c0a2; width: 40%"></div>
+      </div>
+      <div style="text-align: center">
+        <div
+          style="width: 5px; height: 50px; background: #0e8d6b; margin: auto"
+        ></div>
+      </div>
+      <div class="footer-nav-links-container">
+        <div class="footer-nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Aboutus.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-links">
+          <ul>
+            <li><a href="Adminsignup.html">Sign up</a></li>
+            <li><a href="Hospitals.html">Hospitals</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-social-media-links-container">
+        <a
+          href="https://www.facebook.com"
+          class="fa fa-facebook"
+          style="
+            display: flex;
+            font-size: 35px;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></a>
+        <a
+          href="https://www.instagram.com"
+          class="fa fa-instagram"
+          style="
+            display: flex;
+
+            font-size: 35px;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></a>
+        <a
+          href="https://www.twitter.com"
+          class="fa fa-twitter"
+          style="
+            display: flex;
+            font-size: 35px;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></a>
+        <a
+          href="https://www.linkedin.com"
+          class="fa fa-linkedin"
+          style="
+            display: flex;
+            font-size: 35px;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></a
+        ><a
+          href="https://www.pinterest.com"
+          class="fa fa-pinterest"
+          style="
+            display: flex;
+            font-size: 35px;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></a>
+      </div>
+      <div style="text-align: center; margin-top: 30px; color: white">
+        ©
+        <!-- -->2021<!-- -->
+        All rights reserved to Longevo<br />
+        <small><a>PRIYAL TIWARY</a></small>
+      </div>
+      <br />
+    </div>
+  </body>
+</html>

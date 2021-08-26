@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" href="assets\favicon-32x33.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css\Home.css" />
+    <title>LONGEVO</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header-nav">
+        <ul class="nav-ul">
+          <li class="nav-li logo-li">
+            <a href="/index.html">
+              <div class="first">
+                <img src="assets\default (1).png" widht="60" height="60" />
+              </div>
+
+              <!-- <span class="logo-text">Company</span> -->
+            </a>
+            <div class="menu-icon" onclick="showMenu()">
+              <svg viewBox="0 -53 386 386" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+                />
+                <path
+                  d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+                />
+                <path
+                  d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+                />
+              </svg>
+            </div>
+          </li>
+          <li class="nav-li platform-li">
+            <a href="index.html"
+              ><i
+                class="fas fa-home"
+                style="
+                  background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+                  background: -webkit-linear-gradient(
+                    left,
+                    #234e74,
+                    #52c0a2 100%
+                  );
+                  background: linear-gradient(left, #234e74, #52c0a2 100%);
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              ></i>
+              Home</a
+            >
+          </li>
+          <li class="nav-li">
+            <a href="Aboutus.html"
+              ><i
+                class="fas fa-info-circle"
+                style="
+                  background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+                  background: -webkit-linear-gradient(
+                    left,
+                    #234e74,
+                    #52c0a2 100%
+                  );
+                  background: linear-gradient(left, #234e74, #52c0a2 100%);
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              ></i>
+              About us</a
+            >
+          </li>
+          <li class="nav-li">
+            <a href="Adminsignup.html"
+              ><i
+                class="fas fa-users"
+                style="
+                  background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+                  background: -webkit-linear-gradient(
+                    left,
+                    #234e74,
+                    #52c0a2 100%
+                  );
+                  background: linear-gradient(left, #234e74, #52c0a2 100%);
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              ></i>
+              Sign Up</a
+            >
+          </li>
+          <li class="nav-li">
+            <a href="Hospitals.html"
+              ><i
+                class="fas fa-plus-square"
+                style="
+                  background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+                  background: -webkit-linear-gradient(
+                    left,
+                    #234e74,
+                    #52c0a2 100%
+                  );
+                  background: linear-gradient(left, #234e74, #52c0a2 100%);
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              ></i>
+              Hospitals</a
+            >
+          </li>
+          <li class="nav-li">
+            <a href="Admin login.html"
+              ><i
+                class="fas fa-key"
+                style="
+                  background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+                  background: -webkit-linear-gradient(
+                    left,
+                    #234e74,
+                    #52c0a2 100%
+                  );
+                  background: linear-gradient(left, #234e74, #52c0a2 100%);
+                  -webkit-background-clip: text;
+                  -moz-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              ></i>
+              Admin Login</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="slideshow-container">
+      <div class="mySlides fade" style="display: block">
+        <img id="car" src="assets\1.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img id="car" src="assets\2.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img id="car" src="assets\3.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img id="car" src="assets\4.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img id="car" src="assets\5.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img id="car" src="assets\6.jpg" style="width: 100%" />
+      </div>
+    </div>
+    <!-- <br /><br /><br /> -->
+    <div class="registration-button-container">
+      <div class="registration-button">
+        <button type="button" class="exact-button">
+          <span
+            ><i class="fas fa-hospital-user"></i>
+            <a href="form.html" style="color: white">BOOK NOW</a></span
+          >
+        </button>
+      </div>
+    </div>
+    <div class="section1">
+      <img src="assets\cardiology-bg.jpg" />
+      <div class="sec1_title">
+        <h1
+          style="font-size: 62px; line-height: 100px; font-family: sans-serif"
+        >
+          Cardiology
+        </h1>
+        <p style="font-size: 18px; line-height: 24px">
+          <br />
+          <br />
+
+          The Cardio Hospitals engrouped under us are regarded as one of the
+          best heart hospitals in India, performing a multitude of treatments
+          and procedures in cardiology and cardiothoracic surgery. The scorecard
+          shows an unmatched record of over 1,52,000 cardiac and cardiothoracic
+          surgeries.<br />
+          <br />
+          We have vast experience in the most complicated coronary artery bypass
+          surgery, surgery for all types of valvular heart diseases, paediatric
+          heart surgery, adult and paediatric heart transplantation with success
+          rates comparable to international standards.
+        </p>
+      </div>
+    </div>
+    <div class="section2">
+      <img src="assets\sec_1.png" />
+      <div class="sec2_title">
+        <h1
+          style="font-size: 62px; line-height: 150px; font-family: sans-serif"
+        >
+          Nephrology
+        </h1>
+        <p style="font-size: 18px; line-height: 24px">
+          Nephrology is a branch of medical science that deals with the
+          diagnosis and treatment of disorders related to the kidney. We house
+          some of the very best hospitals & specialists in the world who
+          specialize in management of kidney failure, dialysis, electrolyte
+          disturbance, diabetic nephropathy, hypertension to kidney transplant.
+          The transplant program is very active. Longevo is your one-stop
+          destination to book the best Nephrologists in your town.
+        </p>
+      </div>
+    </div>
+    <div class="section3">
+      <img src="assets\sec_2.png" />
+      <div class="sec3_title">
+        <h1
+          style="font-size: 62px; line-height: 150px; font-family: sans-serif"
+        >
+          Robotic-Surgery
+        </h1>
+        <p style="font-size: 18px; line-height: 24px">
+          Robotic Surgery is a branch of medical science that uses a robotic arm
+          controlled with a computer by a surgeon. Small tools attached to the
+          robotic arm are then used to perform the surgery by copying the hand
+          movements of the surgeon as he controls the robotic arm. With this
+          method being more convenient for the surgeon due to a perfect view of
+          the area under surgery,the hospitals under Longevo Robotic Surgery
+          Department is equipped with a skilled team of the best Surgeons.
+          Longevo is your one-stop destination to book the finest Robot-assisted
+          Surgeons in your town.
+        </p>
+      </div>
+    </div>
+    <div class="section4">
+      <img src="assets\sec_8.png" />
+      <div class="sec4_title">
+        <h1
+          style="font-size: 62px; line-height: 150px; font-family: sans-serif"
+        >
+          Bariatric Surgery
+        </h1>
+        <p style="font-size: 18px; line-height: 24px">
+          Bariatric Surgery deals with weight reduction using various techniques
+          to combat obesity. The process includes reducing the size of the
+          stomach or removing a portion of the stomach or re-routing the small
+          intestine. Longevo helps you find the best bariatric surgeons in the
+          nation who are skilled in Gastrectomy and Gastroplasty among other
+          procedures. With Longevo, booking an appointment with the finest
+          Bariatric Surgeons is just a click away.
+        </p>
+      </div>
+    </div>
+    <div class="section5">
+      <img src="assets\sec_10.png" />
+      <div class="sec5_title">
+        <h1
+          style="font-size: 62px; line-height: 150px; font-family: sans-serif"
+        >
+          Pulmonary
+        </h1>
+        <p style="font-size: 20px; line-height: 24px">
+          Pulmonary Medicine at Hospitals under Longevo provides expertise in a
+          broad range of diseases including asthma, COPD, critical care, cystic
+          fibrosis, interstitial lung disease, lung cancer, neuromuscular
+          disease, pulmonary hypertension, sarcoidosis, and sleep medicine. The
+          smoke cessation clinics, COPD clinics are specialized clinics which
+          offer tailor made programs and run by a team of Pulmonologist and
+          paramedical teams. Our smoke cessation programs are the best in the
+          country with huge success rate and are implemented by many corporate
+          companies for their employees. Longevo is your one-stop destination to
+          book the finest Pulmonologist in your town.
+        </p>
+      </div>
+    </div>
+    <div class="section6">
+      <img src="assets\sec_6.png" />
+      <div class="sec6_title">
+        <h1
+          style="font-size: 62px; line-height: 150px; font-family: sans-serif"
+        >
+          Urology
+        </h1>
+        <p style="font-size: 18px; line-height: 24px">
+          Urology deals with diagnosis and treatment of diseases predominantly
+          of male reproductive organs and the urinary tract of males and
+          females. Hospitals under Longevo have state-of-the-art Urology
+          facilities including minimally invasive surgeries, robotics and
+          laparoscopy techniques, fiber-optic endoscopy, and lithotripsy units.
+          An urologist deals with diseases such as Incontinence, prostate
+          enlargement, kidney stones, prostate cancer, penile fractures, urinary
+          infections, and STDs, just to name a few. The department works closely
+          with uro-oncology, uro gynecology, nephrology, colorectal surgery,
+          andrology to offer a more systematic and collaborative approach to
+          treatment. So don’t hesitate and walk right through us, Longevo's got
+          your back to let our urologists fix you up just fine.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-longevo">
+      <br /><br />
+      <div
+        style="
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        "
+      >
+        <div style="height: 5px; background-color: #234e74; width: 40%"></div>
+        <div style="text-align: center">
+          <img
+            class="footer-logo"
+            src="assets\profile-removebg-preview.png"
+            alt="LOGO"
+          />
+        </div>
+        <div style="height: 5px; background: #52c0a2; width: 40%"></div>
+      </div>
+      <div style="text-align: center">
+        <div
+          style="width: 5px; height: 50px; background: #0e8d6b; margin: auto"
+        ></div>
+      </div>
+      <div class="footer-nav-links-container">
+        <div class="footer-nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Aboutus.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-links">
+          <ul>
+            <li><a href="Adminsignup.html">Sign up</a></li>
+            <li><a href="Hospitals.html">Hospitals</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-social-media-links-container">
+        <a
+          href="https://www.facebook.com"
+          class="fa fa-facebook"
+          style="
+            display: flex;
+            font-size: 35px;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></a>
+        <a
+          href="https://www.instagram.com"
+          class="fa fa-instagram"
+          style="
+            display: flex;
+
+            font-size: 35px;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></a>
+        <a
+          href="https://www.twitter.com"
+          class="fa fa-twitter"
+          style="
+            display: flex;
+            font-size: 35px;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></a>
+        <a
+          href="https://www.linkedin.com"
+          class="fa fa-linkedin"
+          style="
+            display: flex;
+            font-size: 35px;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></a
+        ><a
+          href="https://www.pinterest.com"
+          class="fa fa-pinterest"
+          style="
+            display: flex;
+            font-size: 35px;
+            background: -moz-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: -webkit-linear-gradient(left, #234e74, #52c0a2 100%);
+            background: linear-gradient(left, #234e74, #52c0a2 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          "
+        ></a>
+      </div>
+      <div style="text-align: center; margin-top: 30px; color: white">
+        ©
+        <!-- -->2021<!-- -->
+        All rights reserved to Longevo<br />
+        <small><a>PRIYAL TIWARY</a></small>
+      </div>
+      <br />
+    </div>
+
+    <script src="js\Home.js"></script>
+  </body>
+</html>
